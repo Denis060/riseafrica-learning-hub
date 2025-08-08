@@ -1,0 +1,95 @@
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+    padding: 0.75rem 1rem; /* 12px 16px */
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    color: rgb(107 114 128);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px; /* Aligns with the parent border */
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+.tab-btn:hover {
+    color: #0A2463;
+}
+.tab-btn.active {
+    color: #0A2463;
+    border-bottom-color: #FFD700;
+}
+
+.form-group-icon {
+    position: relative;
+}
+.form-group-icon label {
+    display: block;
+    color: rgb(55 65 81);
+    font-weight: 700;
+    margin-bottom: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+}
+.form-group-icon .input-icon {
+    position: absolute;
+    left: 0.75rem; /* 12px */
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(156 163 175);
+    z-index: 10;
+}
+.form-group-icon input,
+.form-group-icon select,
+.form-group-icon textarea {
+    width: 100%;
+    padding-left: 2.5rem; /* 40px */
+    padding-right: 1rem; /* 16px */
+    padding-top: 0.75rem; /* 12px */
+    padding-bottom: 0.75rem; /* 12px */
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem; /* 8px */
+    background-color: rgb(249 250 251);
+}
+.form-group-icon input:focus,
+.form-group-icon select:focus,
+.form-group-icon textarea:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #FFD700; /* ring-2 focus:ring-[#FFD700] */
+}
+.form-group-icon input:disabled {
+    background-color: rgb(229 231 235);
+    cursor: not-allowed;
+}
+/* Special adjustment for the icon in a textarea */
+.form-group-icon .input-icon.top-4 {
+    top: 1.25rem; /* 20px - to align better with the first line of text */
+    transform: none;
+}
+
+.form-submit-btn {
+    width: 100%;
+    background-color: #0A2463;
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.form-submit-btn:hover {
+    background-color: #0e2d7a; /* A slightly lighter shade for hover */
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
